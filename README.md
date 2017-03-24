@@ -1,1 +1,1 @@
-# GameBoard
+# Scoreboard
