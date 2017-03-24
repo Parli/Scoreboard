@@ -1,0 +1,31 @@
+{
+  "name": "scoreboard",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "babel-core": "^6.24.0",
+    "babel-loader": "^6.4.1",
+    "babel-preset-latest": "^6.24.0",
+    "babel-preset-react": "^6.23.0",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "webpack": "^2.3.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "compile": "webpack",
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Parli/Scoreboard.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Parli/Scoreboard/issues"
+  },
+  "homepage": "https://github.com/Parli/Scoreboard#readme"
+}
