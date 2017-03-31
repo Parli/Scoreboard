@@ -4,7 +4,7 @@
 ```
 players:
   name: "Yonatan"
-  avatar: "https://www.imgur.com/asdlkfj"
+  avatarURL: "https://www.imgur.com/asdlkfj"
   rounds:
     {roundKey}: true
     {roundKey}: true
