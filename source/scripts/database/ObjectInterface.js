@@ -3,7 +3,7 @@ import FirebaseInterface from './FirebaseInterface'
 class ObjectInterface extends FirebaseInterface {
   create(data) {
     this.data = data;
-    this.key = this.database.ref('players').push(data).key;
+    this.key = this.database.ref(this.parentKey).push(data).key;
     return this;
   }
   update(data) {
