@@ -12,12 +12,12 @@ var scoreboardApp = firebase.initializeApp(firebaseConfig);
 
 import Counter from './components/Counter';
 
-import Player from './database/Player'
-import PlayerList from './database/PlayerList'
+import * as database from './database'
+
+console.log(database);
 
 window.app = scoreboardApp;
-window.Player = Player;
-window.PlayerList = PlayerList;
+window.database = database;
 
 document.addEventListener('DOMContentLoaded', function() {
   ReactDOM.render(

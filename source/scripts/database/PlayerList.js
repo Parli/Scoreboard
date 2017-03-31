@@ -1,15 +1,8 @@
-import FirebaseInterface from './FirebaseInterface'
+import ListInterface from './ListInterface'
 
-class PlayerList extends FirebaseInterface {
-  constructor(database) {
-    super(database);
-    return this;
-  }
-  fetch(playerID) {
-    this.database.ref('players').once('value', (snapshot) => {
-      this.data = snapshot.val();
-    });
-    return this;
+class PlayerList extends ListInterface {
+  get parentKey() {
+    return 'players';
   }
 }
 

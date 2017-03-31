@@ -2,6 +2,7 @@ class FirebaseInterface {
   constructor(database) {
     this.database = database;
     this.data = {};
+    return this;
   }
   create() {
     throw new Error('FirebaseInterface "create" method not implemented');
@@ -14,6 +15,9 @@ class FirebaseInterface {
   }
   fetch() {
     throw new Error('FirebaseInterface "fetch" method not implemented');
+  }
+  get parentKey() {
+    throw new Error('FirebaseInterface "parentKey" property is not defined');
   }
 }
 
