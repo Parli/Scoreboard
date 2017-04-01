@@ -10,7 +10,7 @@ class PlayerPage extends React.Component {
     let player = new Player(app.database()).fetch(playerKey)
     this.state = player.data
     player.ref.on('value', (snapshot) => {
-      this.setState(player.data);
+      this.setState(snapshot.val());
     });
   }
 
