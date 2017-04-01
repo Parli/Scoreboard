@@ -10,7 +10,7 @@ class ObjectInterface extends FirebaseInterface {
     if (!this.key) {
       throw new Error('Object has not been saved to the database');
     }
-    this.database.ref(this.parentKey).child(this.key).update(data);
+    this.ref.update(data);
     return this;
   }
   delete(objectKey) {
@@ -18,7 +18,7 @@ class ObjectInterface extends FirebaseInterface {
     if (!this.key) {
       throw new Error('Object has not been saved to the database');
     }
-    this.database.ref(this.parentKey).child(this.key).remove();
+    this.ref.remove();
     return this;
   }
   fetch(objectKey) {
@@ -26,10 +26,13 @@ class ObjectInterface extends FirebaseInterface {
     if (!this.key) {
       throw new Error('Object has not been saved to the database');
     }
-    this.database.ref(this.parentKey).child(objectKey).once('value', (snapshot) => {
+    this.ref.once('value', (snapshot) => {
       this.data = snapshot.val();
     });
     return this;
+  }
+  get ref() {
+    return this.database.ref(this.parentKey).child(this.key);
   }
 }
 

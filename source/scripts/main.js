@@ -8,20 +8,18 @@ var firebaseConfig = {
   storageBucket: "office-scoreboard.appspot.com",
   messagingSenderId: "727705217553"
 };
-var scoreboardApp = firebase.initializeApp(firebaseConfig);
+var app = firebase.initializeApp(firebaseConfig);
 
-import Counter from './components/Counter';
+import PlayerPage from './pages/PlayerPage';
 
-import * as database from './database'
+import * as models from './models'
 
-console.log(database);
-
-window.app = scoreboardApp;
-window.database = database;
+window.app = app;
+window.models = models;
 
 document.addEventListener('DOMContentLoaded', function() {
   ReactDOM.render(
-    React.createElement(Counter),
+    React.createElement(PlayerPage, {app, playerKey: '-KgaUwpaXsEKO6UhyDey'}),
     document.getElementById('container')
   );
 });
